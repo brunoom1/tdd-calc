@@ -17,6 +17,7 @@ test('deveria retornar a soma dos números negativos', () => {
 test('deveria retornar um erro do tipo InvalidParam', () => {
   try {
     calculadora.somar("2", "4");
+    throw false;
   } catch (err) {
     expect(new Error('InvalidParam')).toEqual(err);
   }

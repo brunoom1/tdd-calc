@@ -17,6 +17,22 @@ class Calculadora {
     return a - b;
   }
 
+  dividir (a, b) {
+    this._verificarParametros(a, b);
+
+    if (b === 0) {
+      throw new Error('Infinity');
+    }
+
+    return a / b;
+  }
+
+  multiplicar (a, b) {
+    this._verificarParametros(a, b);
+
+    return a * b;
+  }
+
 }
 
 module.exports = Calculadora;
